@@ -6,7 +6,6 @@
     background-color: aliceblue;
 }
 .card{
-    border: 1px solid green;
     width: 90%;
     max-width: 500px;
     background: linear-gradient(135deg,#00feba,#5b548a);
@@ -19,11 +18,16 @@
 .card__input{
     display: flex;
     justify-content: center;
-
+}
+.input__tag{
+    height: 30px;
+    border-radius: 5px;
+    
 }
 .input__button{
     border: none;
+    cursor: pointer;
 }
 .button__image{
-    width: 20px;
+    width: 26px;
 }
