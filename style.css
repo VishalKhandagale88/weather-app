@@ -28,7 +28,7 @@ body{
 .input__tag{
     height: 40px;
     width: 400px;
-    border-radius: 5px;
+    border-radius: 15px;
     border: none;
 }
 .input__button{
