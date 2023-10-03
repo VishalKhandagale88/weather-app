@@ -16,6 +16,11 @@
     padding: 40px 30px;
     text-align: center;
 }
+.card__input{
+    display: flex;
+    justify-content: center;
+
+}
 .input__button{
     border: none;
 }
