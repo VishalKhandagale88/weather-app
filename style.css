@@ -5,9 +5,20 @@
     box-sizing: border-box;
     background-color: aliceblue;
 }
+.card{
+    border: 1px solid green;
+    width: 90%;
+    max-width: 500px;
+    background: linear-gradient(135deg,#00feba,#5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 11px;
+    padding: 40px 30px;
+    text-align: center;
+}
 .input__button{
     border: none;
 }
-.button__icon{
-    height: 25px;
+.button__image{
+    size: 10px;
 }
