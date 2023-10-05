@@ -41,3 +41,9 @@ body{
 .button__image{
     width: 26px;
 }
+.data__more{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
