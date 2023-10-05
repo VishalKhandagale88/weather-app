@@ -17,8 +17,8 @@
         <div class="card__weather">            
                 <img class="weather__image" src="https://img.icons8.com/plasticine/100/rain.png" alt="rain"/>            
             <div class="weather__data">
-                <h1>22 °C</h1>
-                <h2>New York</h2>
+                <h1 class="data__percentage">22 °C</h1>
+                <h2 class="data__city">New York</h2>
                 <div class="data__more">
                     <div class="more__col">      
                         <img  class="col__humidityImage" src="https://img.icons8.com/ultraviolet/40/hygrometer.png" alt="hygrometer"/>                                            
@@ -43,9 +43,16 @@
     <script>
         const apikey = "3e3d5cd765bd72f88edb122a69887229";
         const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=mumbai";
-        async function chechWeather(){
+        async function checkWeather(){
             const response = await fetch(apiUrl+`&appid=${apikey}`);
+            const data = await response.json();
+            console.log(data);
+            const temperature = document.querySelector(".data__percentage")
+            temperature.innerHTML= data.main.temp;
+            const city = document.querySelector(".data__city");
+            city.innerHTML = data.name;
         }
+        checkWeather();
     </script>
 </body>
 </html>
