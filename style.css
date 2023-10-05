@@ -20,6 +20,9 @@ body{
 .card__weather{
     display: none;
 }
+.weather__image{
+    width: 100px;
+}
 .card__input{
     display: flex;
     justify-content: center;
