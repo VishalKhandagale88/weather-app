@@ -68,20 +68,27 @@
             }else{
                 const response = await fetch(apiUrl+cityname+`&appid=${apikey}`);
                 const data = await response.json();
-                console.log(data);
-                const temperature = document.querySelector(".data__percentage")
-                const tempData = Math.round(data.main.temp);
-                temperature.innerHTML=tempData;
+                console.log(data.cod);
+                if(response.status==404){
+                    const errorElement = document.querySelector(".card__errorMessage")
+                    errorElement.style.display="block"
+                }else{
+                    const temperature = document.querySelector(".data__percentage")
+                    const tempData = Math.round(data.main.temp);
+                    temperature.innerHTML=tempData;
+                    
+                    const city = document.querySelector(".data__city");
+                    city.innerHTML = data.name;
+                    const windSpeed = document.querySelector(".col__wind");
+                    windSpeed.innerHTML=Math.round(data.wind.speed);
+                    const humidity = document.querySelector(".humidity__percentage");
+                    humidity.innerHTML=Math.round(data.main.humidity);   
+                    if(tempData>30){
+                        temperature.style.color="red";
+                    }  
+                }
                 
-                const city = document.querySelector(".data__city");
-                city.innerHTML = data.name;
-                const windSpeed = document.querySelector(".col__wind");
-                windSpeed.innerHTML=Math.round(data.wind.speed);
-                const humidity = document.querySelector(".humidity__percentage");
-                humidity.innerHTML=Math.round(data.main.humidity);   
-                if(tempData>30){
-                    temperature.style.color="red";
-                }   
+                 
             }
                  
         }

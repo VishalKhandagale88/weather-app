@@ -26,6 +26,10 @@ body{
     align-items: center;
     column-gap: 5px;
 }
+.card__errorMessage{
+    color: rgba(255, 0, 0, 0.515);
+    display: none;
+}
 input[type=text]{
     padding:20px;
     border: 0;
