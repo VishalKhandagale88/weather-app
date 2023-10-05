@@ -45,6 +45,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     margin-top: 25px;
+    column-gap: 15px;
 }
 .col__humidityImage{
     width: 50px;
@@ -57,7 +58,6 @@ body{
 }
 .data__unitsymbol{
     font-size: large;
-    align-items: baseline;
 }
 .data__number{
     display: flex;
