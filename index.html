@@ -73,6 +73,10 @@
                     const errorElement = document.querySelector(".card__errorMessage")
                     errorElement.style.display="block"
                 }else{
+                    const weatherCard = document.querySelector(".card__weather");
+                    weatherCard.style.display = "block";
+
+
                     const temperature = document.querySelector(".data__percentage")
                     const tempData = Math.round(data.main.temp);
                     temperature.innerHTML=tempData;
