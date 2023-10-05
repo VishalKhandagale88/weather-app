@@ -53,21 +53,29 @@
     </div> 
     <script>
         const apikey = "3e3d5cd765bd72f88edb122a69887229";
-        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=mumbai";
-        async function checkWeather(){
-            const response = await fetch(apiUrl+`&appid=${apikey}`);
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+        const input = document.querySelector(".input__tag");
+        const seachButton = document.querySelector(".input__button");        
+
+        async function checkWeather(cityname){
+            const response = await fetch(apiUrl+cityname+`&appid=${apikey}`);
             const data = await response.json();
             console.log(data);
             const temperature = document.querySelector(".data__percentage")
-            temperature.innerHTML= data.main.temp;
+            temperature.innerHTML=Math.round(data.main.temp);
             const city = document.querySelector(".data__city");
             city.innerHTML = data.name;
             const windSpeed = document.querySelector(".col__wind");
-            windSpeed.innerHTML=data.wind.speed;
+            windSpeed.innerHTML=Math.round(data.wind.speed);
             const humidity = document.querySelector(".humidity__percentage");
-            humidity.innerHTML=data.main.humidity
+            humidity.innerHTML=Math.round(data.main.humidity);
         }
-        checkWeather();
+
+        seachButton.addEventListener("click",()=>{
+            checkWeather(input.value);
+        });
+        
+
     </script>
 </body>
 </html>
