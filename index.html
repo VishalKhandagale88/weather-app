@@ -95,9 +95,14 @@
                     windSpeed.innerHTML=Math.round(data.wind.speed);
                     const humidity = document.querySelector(".humidity__percentage");
                     humidity.innerHTML=Math.round(data.main.humidity);   
+                    const cardBackground= document.querySelector(".card");
                     if(tempData>30){
                         temperature.style.color="red";
-                    }  
+                        cardBackground.style.background=" #ff884d"
+                    }  else if(tempData<10){
+                        temperature.style.color="#666699"
+                        cardBackground.style.background=" #809fff"
+                    }
                     
                 }
                 
