@@ -59,7 +59,7 @@
 
         async function checkWeather(cityname){
 
-            if(cityname==""){
+            if(cityname===""){
                 console.log("No city here");
             }else{
                 const response = await fetch(apiUrl+cityname+`&appid=${apikey}`);
