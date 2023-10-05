@@ -47,3 +47,8 @@ body{
     flex-direction: row;
     justify-content: space-between;
 }
+.more__col{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
