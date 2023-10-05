@@ -29,6 +29,8 @@ body{
 .card__errorMessage{
     color: rgba(255, 0, 0, 0.515);
     display: none;
+    align-items: center;
+    padding: 10px;
 }
 input[type=text]{
     padding:20px;
