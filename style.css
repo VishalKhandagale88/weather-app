@@ -34,11 +34,9 @@ body{
 }
 .input__button{
     border-radius: 30px;
-    border: 3px solid #d5ec2468;
     padding: 5px;
     cursor: pointer;
     background: none;
-    
 }
 .button__image{
     width: 26px;
