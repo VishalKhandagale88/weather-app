@@ -64,7 +64,7 @@
 
             if(cityname===""){
 
-                console.log("No city here");
+                alert("please enter city name");
             }else{
                 const response = await fetch(apiUrl+cityname+`&appid=${apikey}`);
                 const data = await response.json();
