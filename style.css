@@ -55,6 +55,10 @@ body{
     justify-content: space-between;
     column-gap: 5px;
 }
+.data__unitsymbol{
+    font-size: large;
+    align-items: baseline;
+}
 .data__number{
     display: flex;
     align-items: center;
