@@ -21,7 +21,7 @@
                 <img class="weather__image" src="https://img.icons8.com/plasticine/100/rain.png" alt="rain"/>            
             <div class="weather__data">
                 <div class="data__number">
-                    <h1 class="data__percentage">22 </h1>
+                    <h1 class="data__percentage">-- </h1>
                     <h1 class="data__unitsymbol">°C</h1>
                 </div>
               
@@ -31,7 +31,7 @@
                         <img  class="col__humidityImage" src="https://img.icons8.com/ultraviolet/40/hygrometer.png" alt="hygrometer"/>                                            
                         <div>
                             <div class="data__number">
-                                <h1 class="humidity__percentage">50</h1>
+                                <h1 class="humidity__percentage">--</h1>
                                 <h3 class="data__unitsymbol">%</h3>
                             </div>                                                        
                             <p>Humidity</p>     
@@ -41,7 +41,7 @@
                             <img  src="https://img.icons8.com/color/48/wind.png" alt="wind"/>
                             <div>
                                 <div class="data__number">
-                                    <h1  class="col__wind">15 </h1>
+                                    <h1  class="col__wind">-- </h1>
                                     <h3 class="data__unitsymbol">km/hr</h3>
                                 </div>
                                 
@@ -78,6 +78,9 @@
                     const weatherImage = document.querySelector(".weather__image");
                     if(data.weather[0].main=="Haze"){
                         weatherImage.src="assets/haze.png";
+                    }
+                    if(data.weather[0].main=="cloudy"){
+                        weatherImage.src="assets/cloudy.png";
                     }
 
                     const temperature = document.querySelector(".data__percentage")
