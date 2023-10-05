@@ -55,3 +55,9 @@ body{
     justify-content: space-between;
     column-gap: 5px;
 }
+.data__number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
