@@ -79,10 +79,12 @@
                     if(data.weather[0].main=="Haze"){
                         weatherImage.src="assets/haze.png";
                     }
-                    if(data.weather[0].main=="cloudy"){
+                    if(data.weather[0].main=="Clouds"){
                         weatherImage.src="assets/cloudy.png";
+                    }                    
+                    if(data.weather[0].main=="Fog"){
+                        weatherImage.src="assets/fog.png";
                     }
-
                     const temperature = document.querySelector(".data__percentage")
                     const tempData = Math.round(data.main.temp);
                     temperature.innerHTML=tempData;
