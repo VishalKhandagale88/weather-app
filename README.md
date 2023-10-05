@@ -5,3 +5,5 @@ Get current weather data for any city.<br>
 Displays temperature, weather condition, and a corresponding icon.<br>
 Provides information such as humidity, wind speed, and visibility.<br>
 Easy-to-use interface.<br>
+# Acknowledgments
+Weather data is provided by OpenWeatherMap.
