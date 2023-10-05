@@ -68,14 +68,17 @@
             }else{
                 const response = await fetch(apiUrl+cityname+`&appid=${apikey}`);
                 const data = await response.json();
-                console.log(data.cod);
+                console.log(data);
                 if(response.status==404){
                     const errorElement = document.querySelector(".card__errorMessage")
                     errorElement.style.display="block"
                 }else{
                     const weatherCard = document.querySelector(".card__weather");
                     weatherCard.style.display = "block";
-
+                    const weatherImage = document.querySelector(".weather__image");
+                    if(data.weather[0].main=="Haze"){
+                        weatherImage.src="assets/haze.png";
+                    }
 
                     const temperature = document.querySelector(".data__percentage")
                     const tempData = Math.round(data.main.temp);
@@ -90,6 +93,7 @@
                     if(tempData>30){
                         temperature.style.color="red";
                     }  
+                    
                 }
                 
                  
